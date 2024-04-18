@@ -1,4 +1,5 @@
-@import url('http://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
 
 :root{
     --orange:  #ff9500;
@@ -8,7 +9,6 @@
     font-size: 'Nunito', sans-serif;
     margin:0; padding:0 ;
     box-sizing: border-box;
-    text-transform: capitalize;
     outline: none; border: none;
     text-decoration: none;
     transition: all .2s linear;
@@ -66,6 +66,10 @@ header .logo span{
     color:var(--orange);
 }
 
+header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100% );
+}
+
 header .navbar a {
     color: #fff;
     font-size: 2rem;
@@ -90,7 +94,7 @@ header .icons i:hover{
 header .search-bar-container{
     position: absolute;
     top: 100%; left: 0; right: 0;
-    padding: 1.5rem 2rem;
+    padding:1.5rem 2rem;
     background: #333;
     display: flex;
     align-items: center;
@@ -125,7 +129,7 @@ header .search-bar-container label:hover{
 
 .login-form-container{
     position:fixed;
-    top:0; left:0;
+    top:-120%; left:0;
     z-index:10000;
     min-height:100vh;
     width:100%;
@@ -133,6 +137,10 @@ header .search-bar-container label:hover{
     display:flex;
     align-items:center;
     justify-content:center;
+}
+
+.login-form-container.active{
+    top:0;
 }
 
 .login-form-container form{
@@ -191,4 +199,103 @@ header .search-bar-container label:hover{
 .login-form-container form p a:hover{
     color: #333;
     text-decoration: underline;
+}
+
+.login-form-container #form-close{
+    position: absolute;
+    top:2rem; right:3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-bar{
+    color: #fff;
+    border: 1rem solid #fff;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    height: 300rem;
+}
+
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:991px){
+    header{
+        padding: 2rem;
+    }
+}
+
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px){
+   #menu-bar{
+    display: initial;
+   }
+
+   header .navbar{
+    position: absolute;
+    top:100%; right: 0; left: 0;
+    background: #333;
+    border-top: .1rem solid rgba(255, 255, 255,.2);
+    padding: 1rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   header .navbar a{
+    display: block;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background:#222;
+   }
+}
+
+
+@media (max-width:450px){
+    html{
+        font-size:50%;
+    }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,7 @@
 
 <body>
     <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
         <a href="#" class="logo"><span>E</span>duardo</a>
         <nav class="navbar">
             <a href="#home">home</a>
@@ -22,28 +23,29 @@
             <a href="#reviw">review</a>
             <a href="#contact">contact</a>
         </nav>
-
-        <div class="icons">
-            <i class="fas fa-search" id="search-btn"></i>
-            <i class="fas fa-user" id="login-btn"></i>
-        </div>
-
-        <form action="" class="search-bar-container">
-            <input type="search" id="search-bar" placeholder="buscar...">
-            <label for="search-bar" class="fas fa-search"></label>
-        </form>
+            <div class="icons">
+                <i class="fas fa-search" id="search-btn"></i>
+                <i class="fas fa-user" id="login-btn"></i>
+            </div>
+            <form action="" class="search-bar-container">
+                <input type="search" id="search-bar" placeholder="buscar...">
+                <label for="search-bar" class="fas fa-search"></label>
+            </form>
     </header>
 
     <div class="login-form-container">
+
+        <i class="fas fa-times" id="form-close"></i>
+
         <form action="">
             <h3>login</h3>
                 <input type="email" class="box" placeholder="Entre com seu email">
                 <input type="password" class="box" placeholder="Entre com sua senha">
                 <input type="submit" value="Login Agora" class="btn">
                 <input type="checkbox" id="lembre-se">
-                <label for="remember">remember me</label>  
+                <label for="remember">Lembrar-se</label>  
             <p>Esqueceu sua senha? <a href="#">Clique aqui</a></p>
-            <p>don't have and account? <a href="#">register now</a></p>
+            <p>Voce quer criar uma conta? <a href="#">registre-se agora</a></p>
         </form>
     </div>
 
@@ -61,21 +63,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="./javascript.js"></script>
+    <script src="javascript.js"></script>
 </body>
 
 </html>
